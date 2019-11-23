@@ -49,7 +49,11 @@ class App extends Component {
   };
   
   addTotal = () => {
-    this.state.totalPrice = 10;
+    let countPrice = 0;
+    for (let i = 0; i < this.state.dishes.length; i++) {
+      countPrice += DishList[i].price * this.state.dishes[i].count;
+    }
+    return countPrice;
   };
   
   render() {
@@ -63,10 +67,13 @@ class App extends Component {
         <DishOrderEmpty
           totalPrice = {this.state.totalPrice}
         />
-        <DishOrderFull
-          removeDish = {this.removeDish}
-          dishes = {this.state.dishes}
-        />
+        <div className={changeClassesFullOrder.join(' ')}>
+          <DishOrderFull
+            removeDish = {this.removeDish}
+            dishes = {this.state.dishes}
+          />
+        </div>
+        
         <div className='AppBlockDishAdd'>
           <p className='Dish-title'>Add dishes:</p>
           
