@@ -1,0 +1,13 @@
+.DishOrder-empty{
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+    padding-left: 30px;
+}
+
+.DishOrder-emptyHide {
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
