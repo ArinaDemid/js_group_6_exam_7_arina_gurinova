@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import './App.css';
 import './components/DishButton/DishButton.css';
-import './components/DishOrder/DishOrder.css'
-import './components/TotalPrice/TotalPrice.css'
-import './components/DishStatus/DishStatus.css'
+import './components/DishOrder/DishOrder.css';
+import './components/TotalPrice/TotalPrice.css';
+import './components/DishStatus/DishStatus.css';
 import DishList from './components/DishList/DishList';
 import DishOrderEmpty from './components/DishOrder/DishOrderEmpty';
 import DishOrderFull from './components/DishOrder/DishOrderFull';
-import TotalPrice from './components/TotalPrice/TotalPrice'
+import TotalPrice from './components/TotalPrice/TotalPrice';
 import DishButtonShow from './components/DishButton/DishButtonShow';
 
 class App extends Component {
