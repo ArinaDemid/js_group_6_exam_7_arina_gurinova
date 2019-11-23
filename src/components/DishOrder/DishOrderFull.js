@@ -1,5 +1,5 @@
 import React from "react";
-import DishesList from '../DishList/DishList';
+import DishList from '../DishList/DishList';
 import DishStatus from '../DishStatus/DishStatus';
 
 const DishOrderFull = ({dishes, removeDish}) => {
@@ -12,7 +12,7 @@ const DishOrderFull = ({dishes, removeDish}) => {
                     key={dish.dish}
                     name={dish.dish}
                     count={dish.count}
-                    summa={dish.count * DishesList[dishes.findIndex(p => p.dish === dish.dish)].price}
+                    summa={dish.count * DishList[dishes.findIndex(p => p.dish === dish.dish)].price}
                     remove={() => removeDish(dish.dish)}
                 />
             );

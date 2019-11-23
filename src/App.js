@@ -2,10 +2,13 @@ import React, {Component} from 'react';
 import './App.css';
 import './components/DishButton/DishButton.css';
 import './components/DishOrder/DishOrder.css'
-import DishButton from './components/DishButton/DishButton';
+import './components/TotalPrice/TotalPrice.css'
+import './components/DishStatus/DishStatus.css'
 import DishList from './components/DishList/DishList';
 import DishOrderEmpty from './components/DishOrder/DishOrderEmpty';
 import DishOrderFull from './components/DishOrder/DishOrderFull';
+import TotalPrice from './components/TotalPrice/TotalPrice'
+import DishButtonShow from './components/DishButton/DishButtonShow';
 
 class App extends Component {
   
@@ -72,29 +75,19 @@ class App extends Component {
             removeDish = {this.removeDish}
             dishes = {this.state.dishes}
           />
+          <TotalPrice
+            money={this.state.totalPrice}
+          />
         </div>
-        
         <div className='AppBlockDishAdd'>
           <p className='Dish-title'>Add dishes:</p>
-          
-          {
-            DishList.map((dish) => {
-              return (
-                <DishButton 
-                  key={dish.name}
-                  image={dish.image}
-                  name={dish.name}
-                  add={() => this.addDish(dish.name)}
-                  price={dish.price}
-                />
-              )
-            })
-          }
+          <DishButtonShow
+            addDish = {this.addDish}
+          />
         </div>
       </div>
-        );
-      }
-    }
-    
-    export default App;
-    
+    );
+  }
+}
+
+export default App;

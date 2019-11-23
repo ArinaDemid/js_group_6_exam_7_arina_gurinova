@@ -29,3 +29,9 @@
     height: 60px;
     width: auto;
 }
+
+.Dish-title {
+    font-size: 20px;
+    width: 100%;
+    font-weight: 600;
+}

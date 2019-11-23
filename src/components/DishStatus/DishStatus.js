@@ -3,11 +3,11 @@ import React from "react";
 const DishStatus = props => {
 
     return (
-        <div className='Dish-info'>
-            <p className='Dish-name'>{props.name}</p>
+        <div className='DishStatus-info'>
+            <p className='DishStatus-name'>{props.name}</p>
             <p>x {props.count}</p>
-            <p className='Dish-priceTotal'> = {props.summa} KGS</p>
-            <p className='Dish-remove' onClick={props.remove}><i className="fas fa-trash-alt" style={{fontSize: '20px'}}></i></p>
+            <p className='DishStatus-priceTotal'> = {props.summa} KGS</p>
+            <p className='DishStatus-remove' onClick={props.remove}><i className="DishStatus-icon fas fa-trash-alt"></i></p>
         </div>
     )
 };
