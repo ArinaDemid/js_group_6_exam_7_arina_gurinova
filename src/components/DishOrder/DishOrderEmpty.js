@@ -1,6 +1,6 @@
 import React from "react";
 
-const DishOrder = ({totalPrice}) => {
+const DishOrderEmpty = ({totalPrice}) => {
     let changeClassesEmptyOrder = ['DishOrder-empty'];
         
     if (totalPrice !== 0) {
@@ -11,4 +11,4 @@ const DishOrder = ({totalPrice}) => {
     )
 };
     
-export default DishOrder;
+export default DishOrderEmpty;
