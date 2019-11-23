@@ -2,22 +2,23 @@ import React from "react";
 import DishesList from '../DishList/DishList';
 import DishStatus from '../DishStatus/DishStatus';
 
-const DishOrderFull = ({dishes}, {removeDish}) => {
+const DishOrderFull = ({dishes, removeDish}) => {
 
     return dishes.map(dish => {
         const showDish = [];
         if (dish.count !== 0) {
-            showDish.push( <DishStatus 
-                key={dish.dish}
-                name={dish.dish}
-                count={dish.count}
-                summa={dish.count * DishesList[dishes.findIndex(p => p.dish === dish.dish)].price}
-                remove={() => removeDish(dish.dish)}
+            showDish.push( 
+                <DishStatus 
+                    key={dish.dish}
+                    name={dish.dish}
+                    count={dish.count}
+                    summa={dish.count * DishesList[dishes.findIndex(p => p.dish === dish.dish)].price}
+                    remove={() => removeDish(dish.dish)}
                 />
-                );
-            }
-            return showDish;
-        }).flat() 
-    };
+            );
+        }
+        return showDish;
+    }).flat() 
+};
     
-    export default DishOrderFull;
+export default DishOrderFull;

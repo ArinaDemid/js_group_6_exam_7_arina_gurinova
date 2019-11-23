@@ -24,16 +24,28 @@ class App extends Component {
   };
   
   addDish = (name) => {
-    console.log(name);
+    const dishes = [...this.state.dishes];
+    dishes.forEach(function(item) {
+      if (item.dish === name) item.count++;
+    });
+
     let totalPrice = this.state.totalPrice;
     totalPrice = this.addTotal();
 
-    this.setState({totalPrice});
+    this.setState({dishes, totalPrice});
     
   };
   
   removeDish = (name) => {
-    console.log(name);
+    const dishes = [...this.state.dishes];
+    dishes.forEach(function(item) {
+      if (item.dish === name && item.count !== 0) item.count--;
+    });
+
+    let totalPrice = this.state.totalPrice;
+    totalPrice = this.addTotal();
+
+    this.setState({dishes, totalPrice});
   };
   
   addTotal = () => {
