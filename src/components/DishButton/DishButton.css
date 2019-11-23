@@ -1,0 +1,31 @@
+.DishButton-price {
+    margin-top: 5px;
+}
+
+.DishButton-block {
+    margin: 5px;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(51, 48, 7);
+    border-radius: 5px;
+    justify-content: space-around;
+    width: 40%;    
+    box-shadow: 7px 10px 12px -11px rgba(0,0,0,0.75);
+}
+
+.DishButton-box {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.DishButton-name {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.DishButton-image {
+    height: 60px;
+    width: auto;
+}
